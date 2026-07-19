@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+
+class Digits {
+
+    private ArrayList<Integer> digitList;
+
+    // Constructor
+    public Digits(int num) {
+
+        digitList = new ArrayList<Integer>();
+
+        if (num == 0) {
+            digitList.add(0);
+        }
+
+        while (num > 0) {
+            digitList.add(0, num % 10);
+            num /= 10;
+        }
+    }
+
+    // Method to display the digits
+    public void displayDigits() {
+        System.out.println("Digits: " + digitList);
+    }
+}
+
+public class M3acp1 {
+
+    public static void main(String[] args) {
+
+        Digits number1 = new Digits(12345);
+        number1.displayDigits();
+
+        Digits number2 = new Digits(0);
+        number2.displayDigits();
+
+        Digits number3 = new Digits(90876);
+        number3.displayDigits();
+    }
+}
