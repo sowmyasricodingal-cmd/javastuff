@@ -29,7 +29,7 @@ public class Student extends Person {
     }
 }
 
-public class M3A2{
+public class M3A2 {
     public static void main(String[] args) {
     Student student = new Student("Alice", 20, "Computer Science");
     System.out.println("Name: " + student.getName());
